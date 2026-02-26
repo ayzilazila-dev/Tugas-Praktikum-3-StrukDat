@@ -1,0 +1,124 @@
+class MyHome:
+    def __init__(self, alamat, warna, jumlah_kamar):
+        self.alamat = alamat
+        self.warna = warna
+        self.jumlah_kamar = jumlah_kamar
+
+    # Method untuk menampilkan data rumah
+    def tampilkan_info(self):
+        print("Alamat       :", self.alamat)
+        print("Warna Rumah  :", self.warna)
+        print("Jumlah Kamar :", self.jumlah_kamar)
+        print("-" * 30)
+
+    # Method untuk mengubah atribut
+    def ubah_atribut(self, alamat=None, warna=None, jumlah_kamar=None):
+        if alamat:
+            self.alamat = alamat
+        if warna:
+            self.warna = warna
+        if jumlah_kamar:
+            self.jumlah_kamar = jumlah_kamar
+
+
+# P1 (Objek pertama)
+p1 = MyHome("Jl. Merdeka No.1", "Putih", 3)
+
+# P2 (Objek kedua)
+p2 = MyHome("Jl. Sudirman No.10", "Biru", 4)
+
+# P3 (Objek ketiga)
+p3 = MyHome("Jl. Mawar No.5", "Hijau", 2)
+
+# Menampilkan data awal
+print("Data Awal:")
+p1.tampilkan_info()
+p2.tampilkan_info()
+p3.tampilkan_info()
+
+# Mengubah atribut p1
+p1.ubah_atribut(warna="Abu-abu", jumlah_kamar=5)
+
+print("Data Setelah Diubah (p1):")
+p1.tampilkan_info()
+
+
+# 1. class MyHome:
+Pada bagian ini dibuat sebuah class bernama MyHome.
+Class ini berfungsi sebagai cetakan (blueprint) untuk membuat 
+objek rumah. Jadi, setiap objek yang dibuat dari class ini akan 
+memiliki atribut dan method yang sama.
+
+# 2.def __init__(self, alamat, warna, jumlah_kamar):
+Bagian ini disebut constructor.
+Constructor adalah method khusus yang otomatis dijalankan saat objek dibuat.
+Parameter yang digunakan:
+self → untuk merepresentasikan objek itu sendiri.
+alamat → untuk menyimpan alamat rumah.
+warna → untuk menyimpan warna rumah.
+jumlah_kamar → untuk menyimpan jumlah kamar.
+
+# 3. self.alamat = alamat
+
+# 4. self.warna = warna
+
+# 5. self.jumlah_kamar = jumlah_kamar
+
+Tiga baris ini berfungsi untuk mengisi atribut objek dengan nilai yang dikirim saat pembuatan objek.
+Penjelasan:
+self.alamat menyimpan data alamat rumah.
+self.warna menyimpan warna rumah.
+self.jumlah_kamar menyimpan jumlah kamar.
+Kata self digunakan agar setiap objek memiliki data masing-masing.
+
+# 6. def tampilkan_info(self):
+Method ini dibuat untuk menampilkan informasi rumah ke layar.
+Method ini hanya memiliki parameter self karena mengambil data 
+dari atribut yang sudah ada di dalam objek.
+
+# 7. Perintah print(...)
+Baris-baris print di dalam method tampilkan_info() berfungsi untuk menampilkan:
+Alamat rumah
+Warna rumah
+Jumlah kamar
+Tanda "-" * 30 digunakan untuk membuat garis pemisah agar 
+tampilan lebih rapi.
+
+# 8. def ubah_atribut(self, alamat=None, warna=None, jumlah_kamar=None):
+Method ini digunakan untuk mengubah nilai atribut.
+Penjelasan:
+Parameter dibuat bernilai default None.
+Artinya, atribut hanya akan berubah jika diisi nilai baru.
+Jika tidak diisi, maka nilai lama tetap digunakan.
+
+# 9. if alamat:
+Jika parameter alamat diisi, maka atribut self.alamat akan diperbarui.
+
+# 10. if warna:
+Jika parameter warna diisi, maka warna rumah akan diganti.
+
+# 11. if jumlah_kamar:
+Jika parameter jumlah kamar diisi, maka nilainya akan diperbarui.
+
+# 12. p1 = MyHome("Jl. Merdeka No.1", "Putih", 3)
+Pada baris ini dibuat objek pertama bernama p1.
+Data yang dimasukkan:
+Alamat: Jl. Merdeka No.1
+Warna: Putih
+Jumlah kamar: 3
+
+# 13. p2 = MyHome(...)
+Membuat objek kedua dengan data berbeda.
+
+# 14. p3 = MyHome(...)
+Membuat objek ketiga dengan data yang juga berbeda.
+
+# 15. p1.tampilkan_info()
+Memanggil method untuk menampilkan informasi dari objek p1.
+Hal yang sama dilakukan pada p2 dan p3.
+
+# 16. p1.ubah_atribut(warna="Abu-abu", jumlah_kamar=5)
+Pada bagian ini atribut objek p1 diubah:
+Warna diubah menjadi Abu-abu
+Jumlah kamar diubah menjadi 5
+Alamat tidak berubah karena tidak diisi
